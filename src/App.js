@@ -13,7 +13,7 @@ import ContentWrapper from './components/ContentWrapper';
 function App() {
   return (
     <div className="wrapper">
-      <Router>
+      <Router basename="/elevat-ed">
         <Navbar />
         <div className="content">
         <Routes>
