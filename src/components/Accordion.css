@@ -1,0 +1,13 @@
+.accordion {
+    border-top: rgb(184,184,184) solid 1px;
+    overflow: hidden;
+}
+
+.content-wrapper div a {
+    font-size: 14px;
+    transition: 0.3s all ease;
+}
+
+.content-wrapper div a:hover {
+    color: rgb(184, 24, 51);
+}
