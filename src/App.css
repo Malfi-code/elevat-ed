@@ -17,6 +17,13 @@ html, body {
     font-family: 'Montserrat', sans-serif;
 }
 
+hl {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+
 .home,
 .services,
 .products,

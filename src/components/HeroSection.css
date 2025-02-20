@@ -27,6 +27,7 @@ h1 {
 
 .button-group .btn-mobile {
     display: block;
+    height: 100%;
 }
 
 .button-group .btn-mobile button {
