@@ -16,7 +16,7 @@ import Mathematics from './contents/Mathematics';
 function App() {
   return (
     <div className="wrapper">
-      <Router basename="/elevat-ed">
+      <Router>
         <Navbar />
         <div className="content">
           <Routes>
@@ -144,7 +144,6 @@ reliable academic support. </p>
                             {value: 90.7, label: 'No', color: '#d40f30'},
                             {value: 100-90.7, label: 'Yes', color: '#207ab9'}
                           ],
-                          innerRadius: 1,
                           cornerRadius: 5,
                         },
                       ]}
@@ -162,7 +161,6 @@ reliable academic support. </p>
                             {value: 100-63.2-10.3, label: 'Sometimes', color: '#3a3acc'},
                             {value: 63.2, label: 'Yes', color: '#207ab9'}
                           ],
-                          innerRadius: 1,
                           cornerRadius: 5,
                         },
                       ]}
@@ -181,7 +179,6 @@ reliable academic support. </p>
                             {value: 60.5, label: 'Considerably', color: '#eb8126'},
                             {value: 25.5, label: 'Very', color: '#2688eb'}
                           ],
-                          innerRadius: 1,
                           cornerRadius: 5,
                         },
                       ]}
@@ -201,7 +198,6 @@ reliable academic support. </p>
                             {value: 45.5, label: 'Considerably', color: '#eb8126'},
                             {value: 25.5, label: 'Very', color: '#2688eb'}
                           ],
-                          innerRadius: 1,
                           cornerRadius: 5,
                         },
                       ]}

@@ -13,14 +13,15 @@
     "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-pdf": "^9.2.1",
     "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "predeploy": "npm run build",
-    "postbuild": "cp build/index.html build/404.html",
-    "deploy": "gh-pages -b main -d build",
+    "postbuild": "cp build/index.html build/404.html && echo 'elevatedgraded.com' > build/CNAME",
+    "deploy": "gh-pages -b main -d build -f",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://malfi-code.github.io/elevat-ed"
+  "homepage": "https://elevatedgraded.com"
 }

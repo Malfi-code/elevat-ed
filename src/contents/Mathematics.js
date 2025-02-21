@@ -1,12 +1,29 @@
 // Mathematics.js
 import React from 'react';
+import { useState } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import ContentWrapper from '../components/ContentWrapper';
 import Video from '../components/Video';
 import BackNext from '../components/BackNext';
+import PDFViewer from '../components/PDFViewer';
+import pdf13 from '../files/math/aa/13.pdf';
+
+import { pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
 
 const Mathematics = () => {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
   return (
     <Routes>
       <Route path='aa/*' element={
@@ -23,12 +40,12 @@ const Mathematics = () => {
             <BackNext next="1-2"/>
           </>}/>
 
-          <Route path='1-2' element={<>
-            <h1 className="!mb-5">1.2: Sequences in general - Series</h1>
+          <Route path='1-2' element={<div className='flex flex-col items-center gap-10'>
+            <h1>1.2: Sequences in general - Series</h1>
             <Video url="https://www.youtube.com/embed/Tj89FA-d0f8"/>
-            {/* Add more content for 1-2 here */}
+            <PDFViewer file={pdf13} className="border border-black" />
             <BackNext back="1-1" next="1-3"/>
-          </>}/>
+          </div>}/>
 
           <Route path='1-3' element={<>
             <h1 className="!mb-5">1.3: Arithmetic sequences</h1>
