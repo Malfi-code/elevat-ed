@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/elevat-ed/static/css/main.4e0a2fcf.css",
+    "main.js": "/elevat-ed/static/js/main.9fec2e01.js",
+    "static/media/pdf.worker.min.mjs": "/elevat-ed/static/media/pdf.worker.min.91ba01046776e1f55f9f.mjs",
+    "static/media/ElevatEd_Logo_Full.jpg": "/elevat-ed/static/media/ElevatEd_Logo_Full.3cc7f0e1aff4b1ab9c8c.jpg",
+    "static/media/ElevatEd_Logo_Min.png": "/elevat-ed/static/media/ElevatEd_Logo_Min.020cece88e9f18994289.png",
+    "static/media/IB_Logo.png": "/elevat-ed/static/media/IB_Logo.5ac3f85073b1f7d52421.png",
+    "static/media/gradedicon.png": "/elevat-ed/static/media/gradedicon.2dd5ffbddac52929e049.png",
+    "index.html": "/elevat-ed/index.html",
+    "main.4e0a2fcf.css.map": "/elevat-ed/static/css/main.4e0a2fcf.css.map",
+    "main.9fec2e01.js.map": "/elevat-ed/static/js/main.9fec2e01.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e0a2fcf.css",
+    "static/js/main.9fec2e01.js"
+  ]
+}

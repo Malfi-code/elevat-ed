@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# production build
+build/
+
+# caches
+.cache/
+
+# macOS
+.DS_Store
+
+# environment variables
+.env
+.DS_Store
