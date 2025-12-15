@@ -1,0 +1,40 @@
+.logo {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+}
+
+#elevated-logo-full {
+    background-image: url('../images/ElevatEd_Logo_Full.jpg');
+    width: calc(227*2px);
+    height: calc(184*2px);
+}
+
+#elevated-logo-min {
+    background-image: url('../images/ElevatEd_Logo_Min.png')
+}
+
+#graded-logo {
+    background-image: url('../images/gradedicon.png')
+}
+
+#ib-logo {
+    background-image: url('../images/IB_Logo.png')
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    #elevated-logo-full {
+        width: calc(0.2vw*227);
+        height: calc(0.2vw*184);
+    }
+
+    #graded-logo {
+        display: none;
+    }
+
+    #ib-logo {
+        display: none;
+    }
+}

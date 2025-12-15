@@ -1,0 +1,122 @@
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.sidebar-container {
+    position: relative;
+    display: inline-block; /* shrinkwrap to the sidebar’s width */
+    transition: 
+        transform 0.3s ease,
+        width 0.15s ease-in-out;
+    width: 20vw;
+}
+
+.sidebar-container.collapsed {
+    transform: translateX(-100%);
+}
+
+.sidebar-container.width-zero {
+    width: 0;
+}
+
+.sidebar {
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid rgb(184, 184, 184);
+    max-width: 20vw;
+    text-align: center;
+    align-self: stretch;
+    height: calc(100vh - 80px - 73px);
+}
+
+.sidebar-content {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 1px solid rgb(184,184,184);
+    border-left: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sidebar-toggle::after {
+    display: inline-block; /* Make it transformable */
+    content: '\25C1';
+    transition: 0.5s all;
+}
+
+.sidebar-toggle.collapsed::after {
+    transform: rotate(-180deg);
+}
+
+.sidebar::before,
+.sidebar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 30px; /* Adjust as needed */
+  pointer-events: none; /* So they don't interfere with clicks */
+}
+
+.sidebar::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), transparent);
+}
+
+.sidebar::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
+}
+
+
+/* 
+.sidebar::before,
+.sidebar::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 10px;
+    width: 20vw;
+    pointer-events: none;
+}
+
+.sidebar::before {
+    top: 80px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), transparent);
+}
+
+.sidebar::after {
+    bottom: 73px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
+} */
+
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        max-width: 40vw;
+        height: calc(100vh - 80px);
+    }
+
+    .sidebar-content h1 {
+        font-size: calc(12px + 0.5vw);
+    }
+
+    .sidebar-content h2 {
+        font-size: calc(12px + 0.5vw);
+    }
+
+    .sidebar::after {
+        bottom: 0px;
+    }
+}
